@@ -1,0 +1,41 @@
+# .gitignore
+
+### Terraform ###
+# Terraform Status Files 
+*.tfstate
+*.tfstate.*
+
+# Terraform Variable Files (AWS Keys, Passwords)
+*.tfvars
+*.auto.tfvars
+
+!dev.tfvars
+!prod.tfvars
+
+# Terraform Local Plugins and Modules 
+.terraform/
+# .terraform.lock.hcl
+
+### AWS / General Secrets ###
+# AWS Key Files 
+*.pem
+*.key
+
+### Node.js (Frontend / Backend API) ###
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+
+### OS Files ###
+.DS_Store
+Thumbs.db
+
+### Python (Backend Worker - Boto3) ###
+__pycache__/
+venv/
+*.pyc
